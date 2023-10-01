@@ -1,5 +1,9 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Footer from "@/components/footer/Footer";
+import NavBar from "@/components/navbar/NavBar";
+import NavBarBottom from "@/components/navbarbottom/NavBarBottom";
+import HeaderSection from "@/components/headersection/HeaderSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +19,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar />
+        <NavBarBottom />
+        {/* <HeaderSection /> */}
+        <div className="lines w-full h-full flex absolute top-0 left-0 z-[1] bg-none justify-evenly">
+          <div className="w-[1px] opacity-30 bg-white"></div>
+          <div className="w-[1px] opacity-30 bg-white"></div>
+          <div className="w-[1px] opacity-30 bg-white"></div>
+          <div className="w-[1px] opacity-30 bg-white"></div>
+        </div>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
