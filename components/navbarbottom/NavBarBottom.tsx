@@ -115,7 +115,7 @@ const NavBarBottom = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className=" fixed top-0 left-0 h-screen bg-black origin-top text-white p-10 w-screen"
+          className=" fixed top-0 left-0 h-screen bg-black origin-top text-white p-10 w-screen z-50"
         >
           <div className="background">
             <div className="video video--cover">

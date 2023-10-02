@@ -29,6 +29,7 @@ export default function RootLayout({
           <div className="w-[1px] opacity-30 bg-white"></div>
           <div className="w-[1px] opacity-30 bg-white"></div>
         </div>
+
         {children}
         <Footer />
       </body>
