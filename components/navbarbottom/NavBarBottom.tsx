@@ -100,7 +100,7 @@ const NavBarBottom = () => {
             </li>
           </ul>
         </div>
-        <div className="flex space-x-2">
+        <div className=" space-x-2 hidden md:flex">
           <div className="rounded-full border border-white p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white">
             EN
           </div>

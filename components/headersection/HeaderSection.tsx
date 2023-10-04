@@ -1,20 +1,10 @@
 "use client";
 import React from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import styles from "./HeaderSection.module.scss";
-interface ParallaxProps {
-  children: string;
-  baseVelocity: number;
-}
+import "animate.css";
+import SkillParalax from "../skillparalax/SkillParalax";
 const menuLinkVars = {
   initial: {
     y: "30vh",
@@ -35,34 +25,43 @@ const HeaderSection = () => {
   return (
     <section className="h-screen w-full bg-[#292929] relative">
       <div className=" flex justify-center  h-full items-center">
-        <div className="relative z-10">
-          <img
+        <div className="relative z-10 flex justify-center items-center">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696156572/Personal_Branding/Header/Group_1868_vsuopt.png"
             alt=""
+            className="sm:max-w-[40rem]"
           />
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151785/Personal_Branding/Header/VS_Code_Light_i9yqks.png"
             alt=""
-            className="absolute top-0 right-0"
+            className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:rotate-12 top-[2rem] right-[1rem] w-[4.5rem] sm:w-[8rem] "
           />
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151784/Personal_Branding/Header/Icon-1_e0fgtz.png"
             alt=""
-            className="absolute top-0 left-0"
+            className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:-rotate-12 w-[4rem] top-[4rem] left-[1rem] sm:w-[6rem]"
           />
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151798/Personal_Branding/Header/Icon-2_owdsuw.png"
             alt=""
-            className="absolute bottom-0 right-0"
+            className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:rotate-12 w-[6rem] bottom-[4rem] right-[1rem] sm:w-[8rem]"
           />
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151798/Personal_Branding/Header/Icon_f7lxtt.png"
             alt=""
-            className="absolute bottom-0 left-0"
+            className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:-rotate-12 bottom-[4rem] left-[1rem] w-[4rem] sm:w-[6rem]"
           />
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1692282579/Personal_Branding/Header/Figma_Cursor_lrdh6e.svg"
             alt=""
+            className="absolute top-[38%] -right-[1rem]"
           />
         </div>
       </div>
@@ -114,6 +113,10 @@ const HeaderSection = () => {
             </motion.div>
           </div>
         </div>
+      </div>
+      <div>
+        helo
+        <SkillParalax baseVelocity={-2}></SkillParalax>
       </div>
     </section>
   );
