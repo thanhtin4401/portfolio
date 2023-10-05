@@ -114,10 +114,7 @@ const HeaderSection = () => {
           </div>
         </div>
       </div>
-      <div>
-        helo
-        <SkillParalax baseVelocity={-2}></SkillParalax>
-      </div>
+      <div>{/* <SkillParalax baseVelocity={-2}></SkillParalax> */}</div>
     </section>
   );
 };
