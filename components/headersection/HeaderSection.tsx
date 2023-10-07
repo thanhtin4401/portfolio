@@ -23,7 +23,7 @@ const menuLinkVars = {
 };
 const HeaderSection = () => {
   return (
-    <section className="h-screen w-full bg-[#292929] relative">
+    <section className="h-screen w-full bg-[#292929] relative overflow-hidden">
       <div className=" flex justify-center  h-full items-center">
         <div className="relative z-10 flex justify-center items-center">
           <motion.img
@@ -59,9 +59,9 @@ const HeaderSection = () => {
             className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:-rotate-12 bottom-[4rem] left-[1rem] w-[4rem] sm:w-[6rem]"
           />
           <img
-            src="https://res.cloudinary.com/dvzingci9/image/upload/v1692282579/Personal_Branding/Header/Figma_Cursor_lrdh6e.svg"
+            src="https://res.cloudinary.com/dvzingci9/image/upload/v1696524174/Personal_Branding/Header/Figma_Cursor_ztvaw6.png"
             alt=""
-            className="absolute top-[38%] -right-[1rem]"
+            className="absolute h-[2rem] top-[40%] right-[2.5rem] lg:top-[40%] lg:right-[2.5rem]"
           />
         </div>
       </div>
@@ -114,7 +114,11 @@ const HeaderSection = () => {
           </div>
         </div>
       </div>
-      <div>{/* <SkillParalax baseVelocity={-2}></SkillParalax> */}</div>
+      <section className="absolute top-1/2 w-full overflow-hidden z-[6] rotate-45">
+        <SkillParalax baseVelocity={-5}>Framer Motion</SkillParalax>
+        {/* <SkillParalax baseVelocity={5}>Scroll velocity</SkillParalax> */}
+      </section>
+      <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-10"></div>
     </section>
   );
 };

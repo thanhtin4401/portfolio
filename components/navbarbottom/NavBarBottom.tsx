@@ -12,6 +12,16 @@ import {
 } from "react-icons/ai";
 
 const NavBarBottom = () => {
+  const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
+  const closeNav = () => {
+    const values = window.scrollY;
+    if (values > 100) {
+      setIsCloseNavBarHeader(true);
+    } else {
+      setIsCloseNavBarHeader(false);
+    }
+  };
+  window.addEventListener("scroll", closeNav);
   const Menus = [
     { name: "Home" },
     { name: "Exprient" },
@@ -74,7 +84,9 @@ const NavBarBottom = () => {
     },
   };
   return (
-    <nav className="bg-transparent ">
+    <nav
+      className={`${isCloseNavBarHeader ? "block" : "hidden"} bg-transition`}
+    >
       <div className="fixed bottom-6 w-full z-30 flex justify-center items-center bg-transparent space-x-2">
         <div className="max-w-[500px] p-1 bg-black rounded-lg border-4 border-[#181818]">
           <ul className="flex flex-row space-x-2 w-full justify-between">

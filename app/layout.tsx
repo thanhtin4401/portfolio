@@ -22,16 +22,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBar />
         <NavBarBottom />
-        {/* <HeaderSection /> */}
         <div className="lines w-full h-full flex absolute top-0 left-0 z-[1] bg-none justify-evenly">
           <div className="w-[1px] opacity-30 bg-white"></div>
           <div className="w-[1px] opacity-30 bg-white"></div>
           <div className="w-[1px] opacity-30 bg-white"></div>
           <div className="w-[1px] opacity-30 bg-white"></div>
         </div>
-
         {children}
-        <Footer />
       </body>
     </html>
   );

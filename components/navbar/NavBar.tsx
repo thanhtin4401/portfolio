@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
 
@@ -13,6 +13,16 @@ const navLinks = [
 ];
 
 const NavBar = () => {
+  const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
+  const closeNav = () => {
+    const values = window.scrollY;
+    if (values > 100) {
+      setIsCloseNavBarHeader(true);
+    } else {
+      setIsCloseNavBarHeader(false);
+    }
+  };
+  window.addEventListener("scroll", closeNav);
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((open) => !open);
@@ -23,7 +33,11 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={`fixed top-8 w-full py-2 px-2 z-10`}>
+    <nav
+      className={`${
+        isCloseNavBarHeader ? "hidden" : "block"
+      } fixed top-8 w-full py-2 px-2 z-10`}
+    >
       <div
         className={`${styles.navbar_background} py-1 px-4 rounded-md sm:container flex justify-between m-auto items-center`}
       >
