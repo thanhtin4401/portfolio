@@ -5,6 +5,7 @@ import { wrap } from "@motionone/utils";
 import styles from "./HeaderSection.module.scss";
 import "animate.css";
 import SkillParalax from "../skillparalax/SkillParalax";
+import Image from "next/image";
 const menuLinkVars = {
   initial: {
     y: "30vh",
@@ -38,6 +39,7 @@ const HeaderSection = () => {
             alt=""
             className="sm:max-w-[40rem]"
           />
+
           <img
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151785/Personal_Branding/Header/VS_Code_Light_i9yqks.png"
             alt=""
@@ -63,8 +65,25 @@ const HeaderSection = () => {
             alt=""
             className="absolute h-[2rem] top-[40%] right-[2.5rem] lg:top-[40%] lg:right-[2.5rem]"
           />
+          <div className=" absolute bottom-0 px-2 py-2 rounded-full border border-white animate-bounce animate-infinite animate-duration-1000 animate-ease-linear">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#C5EFFF"
+              className="w-4 h-4 mt-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
+              />
+            </svg>
+          </div>
         </div>
       </div>
+
       <div className="w-full mx-auto absolute pt-[4rem] top-0 overflow-hidden h-full z-[5]">
         <div className="container w-full mx-auto flex flex-col justify-between items-center text-center h-full">
           <div className="overflow-hidden">
@@ -116,7 +135,6 @@ const HeaderSection = () => {
       </div>
       <section className="absolute top-1/2 w-full overflow-hidden z-[6] rotate-45">
         <SkillParalax baseVelocity={-5}>Framer Motion</SkillParalax>
-        {/* <SkillParalax baseVelocity={5}>Scroll velocity</SkillParalax> */}
       </section>
       <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-10"></div>
     </section>
