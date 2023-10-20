@@ -4,25 +4,28 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
 
-const navLinks = [
-  { title: "What do we do", href: "/" },
-  { title: "What do we do", href: "/" },
-  { title: "What do we do", href: "/" },
-  { title: "What do we do", href: "/" },
-  { title: "What do we do", href: "/" },
-];
-
 const NavBar = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
-  const closeNav = () => {
-    const values = window.scrollY;
-    if (values > 100) {
-      setIsCloseNavBarHeader(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleWindowscroll = () => {
+        if (window.scrollY > 100) {
+          setIsCloseNavBarHeader(true);
+        } else {
+          setIsCloseNavBarHeader(false);
+        }
+      };
+
+      window.addEventListener("scroll", handleWindowscroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleWindowscroll);
+      };
     } else {
-      setIsCloseNavBarHeader(false);
+      return;
     }
-  };
-  window.addEventListener("scroll", closeNav);
+  }, []);
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((open) => !open);

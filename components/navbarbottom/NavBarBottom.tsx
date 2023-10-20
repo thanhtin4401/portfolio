@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NavBarBottom.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -10,18 +10,14 @@ import {
   AiFillYoutube,
   AiOutlineClose,
 } from "react-icons/ai";
-
+import { localStorageService } from "@/services/localStoreService";
+import Image from "next/image";
+import { Link, animateScroll as scroll } from "react-scroll";
 const NavBarBottom = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
-  const closeNav = () => {
-    const values = window.scrollY;
-    if (values > 100) {
-      setIsCloseNavBarHeader(true);
-    } else {
-      setIsCloseNavBarHeader(false);
-    }
-  };
-  window.addEventListener("scroll", closeNav);
+  const [active, setActive] = useState(0);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [langauge, setLangauge] = useState("En");
   const Menus = [
     { name: "Home" },
     { name: "Exprient" },
@@ -29,11 +25,34 @@ const NavBarBottom = () => {
     { name: "Project" },
   ];
 
-  const [active, setActive] = useState(0);
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const handleLanguage = (lg: string) => {
+    setLangauge(lg);
+    localStorageService.set("language", lg);
+  };
+
   const handleToggleMenu = () => {
     setToggleMenu((toggleMenu) => !toggleMenu);
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleWindowscroll = () => {
+        if (window.scrollY > 100) {
+          setIsCloseNavBarHeader(true);
+        } else {
+          setIsCloseNavBarHeader(false);
+        }
+      };
+
+      window.addEventListener("scroll", handleWindowscroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleWindowscroll);
+      };
+    } else {
+      return;
+    }
+  }, []);
   const menuVars = {
     initial: {
       scaleY: 0,
@@ -103,7 +122,16 @@ const NavBarBottom = () => {
                   setActive(i);
                 }}
               >
-                {menu.name}
+                <Link
+                  activeClass="active"
+                  to={menu.name}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  {menu.name}
+                </Link>
               </li>
             ))}
             <li
@@ -116,10 +144,24 @@ const NavBarBottom = () => {
           </ul>
         </div>
         <div className=" space-x-2 hidden md:flex">
-          <div className="rounded-full border border-white p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white">
+          <div
+            onClick={() => {
+              handleLanguage("En");
+            }}
+            className={`${
+              langauge == "En" ? "border-white" : "border-[#494949]"
+            } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+          >
             EN
           </div>
-          <div className="rounded-full border border-[#494949] p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white">
+          <div
+            onClick={() => {
+              handleLanguage("Vn");
+            }}
+            className={`${
+              langauge == "Vn" ? "border-white" : "border-[#494949]"
+            } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+          >
             VN
           </div>
         </div>
@@ -170,19 +212,27 @@ const NavBarBottom = () => {
                     >
                       {Menus.map((menu, i) => {
                         return (
-                          <div className="overflow-hidden">
+                          <div key={i} className="overflow-hidden">
                             <motion.div
                               variants={menuLinkVars}
                               initial="initial"
                               animate="open"
-                              key={i}
                               className={`${
                                 active === i
                                   ? "text-[#9D9E9D]"
                                   : "bg-transparent"
                               } p-2 cursor-pointer hover:text-[#9D9E9D] uppercase w-full font-medium transition-all ease-linear duration-300 rounded-md text-center`}
                             >
-                              {menu.name}
+                              <Link
+                                activeClass="active"
+                                to={menu.name}
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                              >
+                                {menu.name}
+                              </Link>
                             </motion.div>
                           </div>
                         );
@@ -228,10 +278,24 @@ const NavBarBottom = () => {
                     </motion.div>
                   </div>
                   <div className="flex space-x-2 w-full justify-center">
-                    <div className="rounded-full border border-white p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white">
+                    <div
+                      onClick={() => {
+                        handleLanguage("En");
+                      }}
+                      className={`${
+                        langauge == "En" ? "border-white" : "border-[#494949]"
+                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+                    >
                       EN
                     </div>
-                    <div className="rounded-full border border-[#494949] p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white">
+                    <div
+                      onClick={() => {
+                        handleLanguage("Vn");
+                      }}
+                      className={`${
+                        langauge == "Vn" ? "border-white" : "border-[#494949]"
+                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+                    >
                       VN
                     </div>
                   </div>
