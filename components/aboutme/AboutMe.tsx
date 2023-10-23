@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 
 const AboutMe = () => {
@@ -8,7 +9,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section className="about_me container w-full flex justify-center">
+    <section className="about_me container w-full flex justify-center mt-48">
       <div className="w-full  lg:w-[80%] px-2 sm:pl-unset py-8">
         <div className="w-full">
           <h1 className="text-[2rem] font-[600]">About me</h1>
@@ -50,10 +51,10 @@ const AboutMe = () => {
             <div className="hover:scale-110 transition-all duration-200 row-span-2 col-span-3 lg:col-span-1 rounded-lg bg-[black] border-[2px] border-[#101010]">
               <div className="p-2 flex flex-col h-full justify-between">
                 <h1 className="text-[#737373] text-[3rem] font-[700]">
-                  {time.toLocaleTimeString(navigator.language, {
+                  {/* {time.toLocaleTimeString(navigator.language, {
                     hour: "2-digit",
                     minute: "2-digit",
-                  })}
+                  })} */}
                 </h1>
                 <h2 className="text-[1rem] text-[#737373]">
                   Current local time

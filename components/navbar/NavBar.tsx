@@ -3,14 +3,14 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
-
+import "animate.css";
 const NavBar = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleWindowscroll = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 30) {
           setIsCloseNavBarHeader(true);
         } else {
           setIsCloseNavBarHeader(false);
@@ -38,8 +38,8 @@ const NavBar = () => {
   return (
     <nav
       className={`${
-        isCloseNavBarHeader ? "hidden" : "block"
-      } fixed top-8 w-full py-2 px-2 z-10`}
+        isCloseNavBarHeader ? "animate__fadeOutUp" : "animate__fadeInDown"
+      } fixed top-8 w-full py-2 px-2 z-10 animate__animated animate__faster`}
     >
       <div
         className={`${styles.navbar_background} py-1 px-4 rounded-md sm:container flex justify-between m-auto items-center`}

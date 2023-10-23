@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NavBarBottom.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import "animate.css";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -11,7 +12,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import { localStorageService } from "@/services/localStoreService";
-import Image from "next/image";
+
 import { Link, animateScroll as scroll } from "react-scroll";
 const NavBarBottom = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
@@ -106,65 +107,71 @@ const NavBarBottom = () => {
     },
   };
   return (
-    <nav
-      className={`${isCloseNavBarHeader ? "block" : "hidden"} bg-transition`}
-    >
-      <div className="fixed bottom-6 w-full z-30 flex justify-center items-center bg-transparent space-x-2">
-        <div className="max-w-[500px] p-1 bg-black rounded-lg border-4 border-[#181818]">
-          <ul className="flex flex-row space-x-2 w-full justify-between">
-            {Menus.map((menu, i) => (
-              <li
-                key={i}
-                className={`${
-                  active === i ? "bg-[#181818]" : "bg-transparent"
-                } p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-20`}
-                onClick={() => {
-                  setActive(i);
-                }}
-              >
-                <Link
-                  activeClass="active"
-                  to={menu.name}
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+    <nav className={`bg-transition w-full`}>
+      <div
+        className={`${
+          isCloseNavBarHeader ? " animate__fadeInUp" : "animate__fadeOutDown"
+        } animate__animated animate__faster fixed bottom-6 w-full z-30 flex justify-between container mx-auto items-center bg-transparent space-x-2`}
+      >
+        <div>day ne</div>
+        <div className="flex justify-center items-center space-x-2">
+          <div className="max-w-[500px] p-1 bg-black rounded-lg border-4 border-[#181818]">
+            <ul className="flex flex-row space-x-2 w-full justify-between">
+              {Menus.map((menu, i) => (
+                <li
+                  key={i}
+                  className={`${
+                    active === i ? "bg-[#181818]" : "bg-transparent"
+                  } p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-20`}
+                  onClick={() => {
+                    setActive(i);
+                  }}
                 >
-                  {menu.name}
-                </Link>
+                  <Link
+                    activeClass="active"
+                    to={menu.name}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    {menu.name}
+                  </Link>
+                </li>
+              ))}
+              <li
+                className="p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
+                onClick={handleToggleMenu}
+              >
+                <div className="bg-[#36fb50] w-2 h-2 rounded-full"></div>
+                <span>Menu</span>
               </li>
-            ))}
-            <li
-              className="p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
-              onClick={handleToggleMenu}
+            </ul>
+          </div>
+          <div className=" space-x-2 hidden md:flex">
+            <div
+              onClick={() => {
+                handleLanguage("En");
+              }}
+              className={`${
+                langauge == "En" ? "border-white" : "border-[#494949]"
+              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
             >
-              <div className="bg-[#36fb50] w-2 h-2 rounded-full"></div>
-              <span>Menu</span>
-            </li>
-          </ul>
-        </div>
-        <div className=" space-x-2 hidden md:flex">
-          <div
-            onClick={() => {
-              handleLanguage("En");
-            }}
-            className={`${
-              langauge == "En" ? "border-white" : "border-[#494949]"
-            } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
-          >
-            EN
-          </div>
-          <div
-            onClick={() => {
-              handleLanguage("Vn");
-            }}
-            className={`${
-              langauge == "Vn" ? "border-white" : "border-[#494949]"
-            } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
-          >
-            VN
+              EN
+            </div>
+            <div
+              onClick={() => {
+                handleLanguage("Vn");
+              }}
+              className={`${
+                langauge == "Vn" ? "border-white" : "border-[#494949]"
+              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+            >
+              VN
+            </div>
           </div>
         </div>
+        <div>day nef</div>
       </div>
       <AnimatePresence>
         {toggleMenu && (
