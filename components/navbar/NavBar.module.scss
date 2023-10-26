@@ -1,0 +1,108 @@
+.navbar_background {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid linear-gradient(#e66465, #9198e5);
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.loader {
+  height: 100%;
+
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &:hover {
+  }
+}
+.triangle_right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 18px solid #00fd8a;
+  border-bottom: 10px solid transparent;
+}
+.sound_container {
+  border-radius: 2rem;
+  height: 2.3rem;
+  background-color: black;
+  transition: all 0.5s ease;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(90deg, #b8ebff 0%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-tree-color {
+  background: linear-gradient(
+    100deg,
+    #926eef 0%,
+    #4ccbfc 36.46%,
+    #ff752c 73.44%,
+    #fff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sound_container {
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+.stroke {
+  display: block;
+  position: relative;
+  background: #00fd8a;
+  height: 100%;
+  width: 5px;
+  border-radius: 50px;
+  margin: 0 3px;
+  animation: sound-animate 1.2s linear infinite;
+}
+
+@keyframes sound-animate {
+  50% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+
+.contact_button {
+  border-radius: 99px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  text-transform: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid
+      linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
+    #fff;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
