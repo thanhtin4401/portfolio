@@ -1,0 +1,51 @@
+.intro_h1 {
+  overflow: hidden;
+  //   background: linear-gradient(90deg, #b8ebff -14.16%, #fff 118.93%);
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+}
+
+.waving_hand {
+  background: unset;
+  display: inline-block;
+  animation: waving 1s infinite ease-in-out;
+}
+
+.text_hight_light {
+  background: linear-gradient(
+    91deg,
+    #926eef -14.98%,
+    #4ccbfc 38.83%,
+    #ff752c 93.41%,
+    #fff 132.61%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}

@@ -114,7 +114,9 @@ const HeaderSection = () => {
               alt=""
               className="absolute h-[2rem] top-[40%] right-[2.5rem] lg:top-[40%] lg:right-[2.5rem]"
             />
-            <div className=" absolute bottom-0 px-2 py-2 rounded-full border border-white duration-75 animate-bounce">
+            <div
+              className={`${styles.scroll_to_bottom} absolute bottom-0 px-2 py-2 rounded-full border border-white`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

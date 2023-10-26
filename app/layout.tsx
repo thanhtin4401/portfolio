@@ -4,6 +4,7 @@ import Footer from "@/components/footer/Footer";
 import NavBar from "@/components/navbar/NavBar";
 import NavBarBottom from "@/components/navbarbottom/NavBarBottom";
 import HeaderSection from "@/components/headersection/HeaderSection";
+import Intro from "@/components/intro/Intro";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Intro />
         <NavBar />
         <NavBarBottom />
         <div className="lines w-full h-full flex absolute top-0 left-0 z-[1] bg-none justify-evenly">

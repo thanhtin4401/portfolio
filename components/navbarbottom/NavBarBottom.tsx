@@ -107,14 +107,22 @@ const NavBarBottom = () => {
     },
   };
   return (
-    <nav className={`bg-transition w-full`}>
+    <nav className={`bg-transition w-full fixed bottom-6 z-[1000] px-2`}>
       <div
         className={`${
           isCloseNavBarHeader ? " animate__fadeInUp" : "animate__fadeOutDown"
-        } animate__animated animate__faster fixed bottom-6 w-full z-30 flex justify-between container mx-auto items-center bg-transparent space-x-2`}
+        } animate__animated animate__faster  w-full z-30 flex justify-between container mx-auto items-center bg-transparent space-x-2`}
       >
-        <div>day ne</div>
-        <div className="flex justify-center items-center space-x-2">
+        <div>
+          <div
+            className="p-2 cursor-pointer lg:hidden  hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
+            onClick={handleToggleMenu}
+          >
+            <div className="bg-[#36fb50] w-2 h-2 rounded-full"></div>
+            <span>Menu</span>
+          </div>
+        </div>
+        <div className=" justify-center items-center space-x-2 lg:flex hidden">
           <div className="max-w-[500px] p-1 bg-black rounded-lg border-4 border-[#181818]">
             <ul className="flex flex-row space-x-2 w-full justify-between">
               {Menus.map((menu, i) => (
@@ -171,7 +179,22 @@ const NavBarBottom = () => {
             </div>
           </div>
         </div>
-        <div>day nef</div>
+        <div className="cursor-pointer  ml-[unset] flex justify-center items-center hover:-translate-y-2 transition-all duration-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </div>
       </div>
       <AnimatePresence>
         {toggleMenu && (

@@ -34,7 +34,7 @@ import img18 from "../../assets/icons/img/frame_18.png";
 import img19 from "../../assets/icons/img/frame_19.png";
 import img20 from "../../assets/icons/img/frame_20.png";
 import img21 from "../../assets/icons/img/frame_21.png";
-const SkillParalax = ({ children, baseVelocity = 1000 }) => {
+const SkillParalax = ({ baseVelocity = 1000 }) => {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -88,9 +88,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Javascript</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -100,7 +98,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             alt=""
           />
           <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
+            Web Accessibility
           </p>
         </div>
 
@@ -110,9 +108,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">MUI</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -121,9 +117,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Ant Design</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -132,9 +126,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Figma</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -143,9 +135,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Adobe XD</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -154,9 +144,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Command line</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -165,9 +153,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Tailwind</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -176,9 +162,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Responsive</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -187,9 +171,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Angular</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -198,9 +180,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">ReactJS</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -209,9 +189,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">FIREBASE</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -220,9 +198,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Boostrap</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -231,9 +207,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">RESTFull APIs</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -242,9 +216,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">MongoDB</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -253,9 +225,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Git</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -264,9 +234,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">VS Code</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -275,9 +243,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">JQuery</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -285,9 +251,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Github</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -295,9 +259,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">CSS 3</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -305,9 +267,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">HTML 5</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -315,9 +275,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Javascript</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -327,7 +285,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             alt=""
           />
           <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
+            Web Accessibility
           </p>
         </div>
 
@@ -337,9 +295,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">MUI</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -348,9 +304,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Ant Design</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -359,9 +313,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Figma</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -370,9 +322,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Adobe XD</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -381,9 +331,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Command line</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -392,9 +340,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Tailwind</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -403,9 +349,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Responsive</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -414,9 +358,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Angular</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -425,9 +367,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">ReactJS</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -436,9 +376,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">FIREBASE</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -447,9 +385,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Boostrap</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -458,9 +394,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">RESTFull APIs</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -469,9 +403,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">MongoDB</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -480,9 +412,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Git</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -491,9 +421,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">VS Code</p>
         </div>
 
         <div className="mx-2  flex justify-center items-center flex-col">
@@ -502,9 +430,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">JQuery</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -512,9 +438,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">Github</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -522,9 +446,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">CSS 3</p>
         </div>
         <div className="mx-2  flex justify-center items-center flex-col">
           <Image
@@ -532,9 +454,7 @@ const SkillParalax = ({ children, baseVelocity = 1000 }) => {
             className="w-[5rem] h-10 mx-2 object-contain"
             alt=""
           />
-          <p className="text-[16px] skill-name font-bold mt-4">
-            test respone sive
-          </p>
+          <p className="text-[16px] skill-name font-bold mt-4">HTML 5</p>
         </div>
       </motion.div>
     </div>

@@ -3,3 +3,19 @@
   -webkit-text-stroke: 2px #545454;
   -webkit-text-fill-color: transparent;
 }
+
+.scroll_to_bottom {
+  animation: move 1.1s infinite ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
