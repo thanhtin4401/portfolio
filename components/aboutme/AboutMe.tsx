@@ -28,7 +28,7 @@ const AboutMe = () => {
             </div>
             <div className="hover:scale-110 transition-all duration-200 col-span-7 lg:col-span-4 row-span-2 rounded-lg bg-[#101010]">
               <div className="p-4">
-                <h1 className="text-[4rem] font-[700]">I'M THANH TIN</h1>
+                <h1 className="text-[4rem] font-[700]">IM THANH TIN</h1>
                 <p className="text-[1rem] font-normal text-[#7A7A7A]">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
                   hic quibusdam officia cum repudiandae cupiditate amet

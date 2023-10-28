@@ -34,8 +34,8 @@ const Intro = () => {
       ></div>
       <div className="content mt-28 animate__bounceInDown animate__animated">
         <h1 className={`${styles.intro_h1} text-[3rem] font-bold`}>
-          Hi There <span className={styles.waving_hand}>👋</span> ! I'm Tin and
-          I'm a <br />
+          Hi There <span className={styles.waving_hand}>👋</span> ! Im Tin and
+          Im a <br />
           <span className={styles.text_hight_light}>Front End Developer</span>
         </h1>
         <p className="font-[600] text-[1.75rem]">Welcome to my website</p>
