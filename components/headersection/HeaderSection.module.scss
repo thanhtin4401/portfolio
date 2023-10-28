@@ -19,3 +19,36 @@
     transform: translateY(0px);
   }
 }
+
+.text_hight_light {
+  background: linear-gradient(
+    91deg,
+    #926eef -14.98%,
+    #4ccbfc 38.83%,
+    #ff752c 93.41%,
+    #fff 132.61%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text_name {
+  background: linear-gradient(100deg, #b8ebff 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text_title {
+  background: linear-gradient(
+    100deg,
+    #926eef 0%,
+    #4ccbfc 36.46%,
+    #ff752c 73.44%,
+    #fff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

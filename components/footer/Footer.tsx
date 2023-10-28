@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styles from "./Footer.module.scss";
 const Footer = () => {
@@ -5,7 +6,9 @@ const Footer = () => {
     <section className={`${styles.contact} bg-white w-full relative`}>
       <div className="contact_container container mx-auto overflow-hidden flex h-full bottom-0 w-full">
         <div className="contact_left animate__animated animate__fadeInUp w-2/4 justify-end hidden lg:flex mb:py-2 xl:block">
-          <img
+          <Image
+            width={1500}
+            height={1500}
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1691020346/videos/person_vj5bvt.png"
             alt=""
             className="person w-full object-contain"
