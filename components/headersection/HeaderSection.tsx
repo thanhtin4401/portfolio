@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./HeaderSection.module.scss";
 import "animate.css";
 import SkillParalax from "../skillparalax/SkillParalax";
+import Image from "next/image";
+import CardBlog from "../cardblog/CardBlog";
 const menuLinkVars = {
   initial: {
     y: "30vh",
@@ -30,11 +32,17 @@ const HeaderSection = () => {
   });
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   return (
-    <section className="h-screen w-full bg-[#292929] relative ">
+    <section className="lg:h-screen w-full bg-[#292929] relative px-2 lg:px-0">
+      <div className="lines w-full h-full flex absolute top-0 left-0 z-[1] bg-none justify-evenly">
+        <div className="w-[1px] opacity-30 bg-white"></div>
+        <div className="w-[1px] opacity-30 bg-white"></div>
+        <div className="w-[1px] opacity-30 bg-white"></div>
+        <div className="w-[1px] opacity-30 bg-white"></div>
+      </div>
       <div className="w-full overflow-hidden h-full relative">
         <motion.img
           animate={{ x: 100 }}
-          transition={{ ease: "easeOut", duration: 2 }}
+          transition={{ ease: "easeOut", duration: 2, delay: 2.1 }}
           style={{
             y: textY,
           }}
@@ -44,7 +52,7 @@ const HeaderSection = () => {
         />
         <motion.img
           animate={{ x: -100 }}
-          transition={{ ease: "easeOut", duration: 2 }}
+          transition={{ ease: "easeOut", duration: 2, delay: 2.1 }}
           style={{
             y: textY,
           }}
@@ -70,13 +78,20 @@ const HeaderSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.5,
+            delay: 2.1,
             ease: [0, 0.71, 0.2, 1.01],
           }}
         ></motion.div>
-        <div className=" flex justify-center  h-full items-center">
-          <div className="relative z-10 flex justify-center items-center">
-            <motion.img
+        <div className="mt-[6rem] lg:mt-0 flex justify-center h-full items-center container mx-auto">
+          <div className="relative z-10 flex  justify-center flex-col lg:flex-row items-center ">
+            <motion.div
+              style={{
+                y: textY,
+              }}
+              className="animate__zoomInDown w-full lg:w-2/4
+                  flex
+                  flex-col
+                "
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -84,38 +99,71 @@ const HeaderSection = () => {
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696156572/Personal_Branding/Header/Group_1868_vsuopt.png"
-              alt=""
-              className="sm:max-w-[40rem]"
-            />
+            >
+              <h1
+                className={`${styles.text_name} text-[2rem] lg:text-[2.5rem] font-bold text_name`}
+              >
+                THANH TIN{" "}
+                <span className={`${styles.text_title} `}>DEVELOP</span>
+              </h1>
 
-            <img
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151785/Personal_Branding/Header/VS_Code_Light_i9yqks.png"
-              alt=""
-              className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:rotate-12 top-[2rem] right-[1rem] w-[4.5rem] sm:w-[8rem] "
-            />
-            <img
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151784/Personal_Branding/Header/Icon-1_e0fgtz.png"
-              alt=""
-              className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:-rotate-12 w-[4rem] top-[4rem] left-[1rem] sm:w-[6rem]"
-            />
-            <img
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151798/Personal_Branding/Header/Icon-2_owdsuw.png"
-              alt=""
-              className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:rotate-12 w-[6rem] bottom-[4rem] right-[1rem] sm:w-[8rem]"
-            />
-            <img
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696151798/Personal_Branding/Header/Icon_f7lxtt.png"
-              alt=""
-              className="animate__zoomIn animate__animated  absolute transform hover:scale-150 transition-all duration-300 hover:-rotate-12 bottom-[4rem] left-[1rem] w-[4rem] sm:w-[6rem]"
-            />
-            <img
-              src="https://res.cloudinary.com/dvzingci9/image/upload/v1696524174/Personal_Branding/Header/Figma_Cursor_ztvaw6.png"
-              alt=""
-              className="absolute h-[2rem] top-[40%] right-[2.5rem] lg:top-[40%] lg:right-[2.5rem]"
-            />
+              <p className="text-white  text-left  font-light">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+                non quidem sint reiciendis numquam repellendus, aliquid nostrum
+                nam est tempore!
+              </p>
+              <div className="flex my-4">
+                <div className="contact_link h-8 w-8 rounded-full bg-gray-600">
+                  <Image
+                    width={1200}
+                    height={1200}
+                    src="https://res.cloudinary.com/dvzingci9/image/upload/v1692465378/Personal_Branding/Header/LinkedIn_wpm1mv.png"
+                    className="object-contain"
+                    alt=""
+                  />
+                </div>
+                <div className="contact_link h-8 w-8 rounded-full mx-3 bg-gray-600 border-white border">
+                  <Image
+                    width={1200}
+                    height={1200}
+                    src="https://res.cloudinary.com/dvzingci9/image/upload/v1692465378/Personal_Branding/Header/Github_iyvt36.png"
+                    className="object-contain"
+                    alt=""
+                  />
+                </div>
+                <div className="contact_link h-8 w-8 rounded-full bg-gray-600 ">
+                  <Image
+                    width={1200}
+                    height={1200}
+                    src="https://res.cloudinary.com/dvzingci9/image/upload/v1692465378/Personal_Branding/Header/Facebook_i4i3qd.png"
+                    className="object-contain"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="flex space-x-2">
+                <CardBlog />
+                <CardBlog />
+              </div>
+            </motion.div>
+
+            <div className="w-full lg:w-2/4 relative flex justify-center items-center">
+              <motion.img
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 2.2,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+                src="https://res.cloudinary.com/dvzingci9/image/upload/v1696156572/Personal_Branding/Header/Group_1868_vsuopt.png"
+                alt=""
+                className="sm:max-w-[40rem]"
+              />
+            </div>
+
             <div
-              className={`${styles.scroll_to_bottom} absolute bottom-0 px-2 py-2 rounded-full border border-white`}
+              className={`${styles.scroll_to_bottom} absolute bottom-16 lg:bottom-0 px-2 py-2 rounded-full border border-white`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,9 +185,9 @@ const HeaderSection = () => {
       </div>
 
       <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-10"></div>
-      <section className="absolute w-full lg:w-[110vw] -bottom-[5rem]  overflow-hidden z-[20] lg:-rotate-3">
+      {/* <section className="absolute w-full lg:w-[110vw] -bottom-[5rem]  overflow-hidden z-[20] lg:-rotate-3">
         <SkillParalax baseVelocity={-5}>Framer Motion</SkillParalax>
-      </section>
+      </section> */}
     </section>
   );
 };

@@ -14,6 +14,7 @@ import {
 import { localStorageService } from "@/services/localStoreService";
 
 import { Link, animateScroll as scroll } from "react-scroll";
+import Image from "next/image";
 const NavBarBottom = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
   const [active, setActive] = useState(0);
@@ -25,7 +26,12 @@ const NavBarBottom = () => {
     { name: "Service" },
     { name: "Project" },
   ];
+  const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
+  function scrollToTop() {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   const handleLanguage = (lg: string) => {
     setLangauge(lg);
     localStorageService.set("language", lg);
@@ -179,7 +185,12 @@ const NavBarBottom = () => {
             </div>
           </div>
         </div>
-        <div className="cursor-pointer  ml-[unset] flex justify-center items-center hover:-translate-y-2 transition-all duration-500">
+        <div
+          onClick={() => {
+            scrollToTop();
+          }}
+          className="scroll-to-top cursor-pointer  ml-[unset] flex justify-center items-center hover:-translate-y-2 transition-all duration-500"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -219,7 +230,9 @@ const NavBarBottom = () => {
             </div>
             <div className="w-full bg-black h-full "></div>
             <div className="w-full flex absolute top-16 px-16 justify-between left-0">
-              <img
+              <Image
+                width={1200}
+                height={1200}
                 src="https://res.cloudinary.com/dvzingci9/image/upload/v1695478755/Personal_Branding/logoweb_oqexje.png"
                 alt=""
                 className="w-9 h-9"

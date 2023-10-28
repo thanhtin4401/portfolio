@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import "animate.css";
+import Image from "next/image";
 const NavBar = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
 
@@ -45,7 +46,9 @@ const NavBar = () => {
         className={`${styles.navbar_background} py-1 px-4 rounded-md sm:container flex justify-between m-auto items-center`}
       >
         <div className="logo flex">
-          <img
+          <Image
+            width={1200}
+            height={1200}
             src="https://res.cloudinary.com/dvzingci9/image/upload/v1695478755/Personal_Branding/logoweb_oqexje.png"
             alt=""
             className="w-8 h-8"

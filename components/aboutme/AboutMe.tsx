@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const AboutMe = () => {
@@ -17,7 +18,9 @@ const AboutMe = () => {
         <div className="w-full flex justify-center ">
           <div className="w-full h-full grid grid-cols-7 gap-1">
             <div className="col-span-7 lg:col-span-3 row-span-3  hover:scale-110 transition-all duration-200 lg:row-span-4 rounded-lg  bg-[red] overflow-hidden">
-              <img
+              <Image
+                width={1200}
+                height={1200}
                 src="https://res.cloudinary.com/dvzingci9/image/upload/v1696607426/DSC058322_nowqct.png"
                 alt=""
                 className="h-full object-cover w-full"

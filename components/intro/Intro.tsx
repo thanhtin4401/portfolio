@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Intro.module.scss";
 import "animate.css";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 const Intro = () => {
   const [open, setOpen] = useState(false);
 
@@ -19,7 +20,7 @@ const Intro = () => {
     <div
       className={`${
         open ? "animate__fadeOutUpBig" : ""
-      } animate__animated w-full h-screen bg-[#212121] z-[10001] fixed flex justify-center text-center animate__slow`}
+      } animate__animated w-full h-screen bg-[#212121] z-[10001] fixed flex justify-center text-center animate__slow `}
       id="home"
     >
       <div
@@ -39,11 +40,13 @@ const Intro = () => {
         </h1>
         <p className="font-[600] text-[1.75rem]">Welcome to my website</p>
       </div>
-      <img
+      <Image
+        width={1200}
+        height={1200}
         src="https://res.cloudinary.com/dvzingci9/image/upload/v1698222274/Personal_Branding/Intro/image_8_duzhpa.png"
         alt=""
         className="absolute bottom-0 transform -translate-x-2/4 animate__fadeInUp animate__animated"
-      ></img>
+      ></Image>
       <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-20"></div>
     </div>
   );
