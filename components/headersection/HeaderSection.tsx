@@ -185,9 +185,9 @@ const HeaderSection = () => {
       </div>
 
       <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-10"></div>
-      {/* <section className="absolute w-full lg:w-[110vw] -bottom-[5rem]  overflow-hidden z-[20] lg:-rotate-3">
+      <section className="absolute w-full lg:w-[110vw] -bottom-[5rem]  overflow-hidden z-[20] lg:-rotate-3">
         <SkillParalax baseVelocity={-5}>Framer Motion</SkillParalax>
-      </section> */}
+      </section>
     </section>
   );
 };
