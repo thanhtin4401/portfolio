@@ -13,8 +13,8 @@ import {
 } from "react-icons/ai";
 import { localStorageService } from "@/services/localStoreService";
 
-import { Link, animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
+import Link from "next/link";
 const NavBarBottom = () => {
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
   const [active, setActive] = useState(0);
@@ -141,16 +141,7 @@ const NavBarBottom = () => {
                     setActive(i);
                   }}
                 >
-                  <Link
-                    activeClass="active"
-                    to={menu.name}
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  >
-                    {menu.name}
-                  </Link>
+                  <Link href="/page">{menu.name}</Link>
                 </li>
               ))}
               <li
@@ -266,16 +257,7 @@ const NavBarBottom = () => {
                                   : "bg-transparent"
                               } p-2 cursor-pointer hover:text-[#9D9E9D] uppercase w-full font-medium transition-all ease-linear duration-300 rounded-md text-center`}
                             >
-                              <Link
-                                activeClass="active"
-                                to={menu.name}
-                                spy={true}
-                                smooth={true}
-                                offset={50}
-                                duration={500}
-                              >
-                                {menu.name}
-                              </Link>
+                              <Link href="/page">{menu.name}</Link>
                             </motion.div>
                           </div>
                         );
