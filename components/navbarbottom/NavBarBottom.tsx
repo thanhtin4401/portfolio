@@ -121,7 +121,7 @@ const NavBarBottom = () => {
       >
         <div>
           <div
-            className="p-2 cursor-pointer lg:hidden  hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
+            className="p-2 cursor-pointer lg:hidden  hover:bg-[#717171] hover:text-white  transition-all ease-linear duration-100 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
             onClick={handleToggleMenu}
           >
             <div className="bg-[#36fb50] w-2 h-2 rounded-full"></div>
@@ -136,7 +136,7 @@ const NavBarBottom = () => {
                   key={i}
                   className={`${
                     active === i ? "bg-[#181818]" : "bg-transparent"
-                  } p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-20`}
+                  } p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-100 rounded-md text-center w-20`}
                   onClick={() => {
                     setActive(i);
                   }}
@@ -145,7 +145,7 @@ const NavBarBottom = () => {
                 </li>
               ))}
               <li
-                className="p-2 cursor-pointer hover:bg-[#181818] transition-all ease-linear duration-300 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
+                className="p-2 cursor-pointer hover:bg-[#717171] hover:text-white  transition-all ease-linear duration-100 rounded-md text-center w-22 flex items-center space-x-2 bg-white text-black"
                 onClick={handleToggleMenu}
               >
                 <div className="bg-[#36fb50] w-2 h-2 rounded-full"></div>
@@ -160,7 +160,7 @@ const NavBarBottom = () => {
               }}
               className={`${
                 langauge == "En" ? "border-white" : "border-[#494949]"
-              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-100 hover:border-white`}
             >
               EN
             </div>
@@ -170,7 +170,7 @@ const NavBarBottom = () => {
               }}
               className={`${
                 langauge == "Vn" ? "border-white" : "border-[#494949]"
-              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+              } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-100 hover:border-white`}
             >
               VN
             </div>
@@ -186,13 +186,13 @@ const NavBarBottom = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-8 h-8"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
             />
           </svg>
@@ -207,20 +207,19 @@ const NavBarBottom = () => {
             exit="exit"
             className=" fixed top-0 left-0 h-screen bg-black origin-top text-white p-10 w-screen z-50"
           >
-            <div className="background">
-              <div className="video video--cover">
-                {/* <video
-                width="100%"
-                className="h-screen object-cover"
-                src="https://res.cloudinary.com/dvzingci9/video/upload/v1665504047/airBnB/video/X2Download.app-_4K_HDR_NON_NUOC_CAO_BANG_UNESCO_GLOBAL_GEOPARK_VIETNAM.-_1080p_ruoqf8.mp4"
-                autoPlay
-                loop
-                muted
-              ></video> */}
+            <div className="background h-full">
+              <div className="video h-full video--cover">
+                <video
+                  width="100%"
+                  className="h-full object-cover"
+                  src="https://res.cloudinary.com/dvzingci9/video/upload/v1665504047/airBnB/video/X2Download.app-_4K_HDR_NON_NUOC_CAO_BANG_UNESCO_GLOBAL_GEOPARK_VIETNAM.-_1080p_ruoqf8.mp4"
+                  autoPlay
+                  loop
+                  muted
+                ></video>
               </div>
             </div>
-            <div className="w-full bg-black h-full "></div>
-            <div className="w-full flex absolute top-16 px-16 justify-between left-0">
+            <div className="w-full flex absolute top-16 px-16 justify-between left-0 z-50">
               <Image
                 width={1200}
                 height={1200}
@@ -229,12 +228,12 @@ const NavBarBottom = () => {
                 className="w-9 h-9"
               />
               <AiOutlineClose
-                className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-300"
+                className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-100"
                 onClick={handleToggleMenu}
               />
             </div>
             <div className="content">
-              <div className="w-[40vw] bg-black h-screen p-10 absolute top-0 left-2/4 transform -translate-x-2/4 flex items-center">
+              <div className="w-full lg:w-[40vw] bg-black h-screen p-3 lg:p-10 absolute top-0 left-2/4 transform -translate-x-2/4 flex items-center">
                 <div className="w-full">
                   <div className="w-full overflow-hidden">
                     <motion.div
@@ -242,7 +241,7 @@ const NavBarBottom = () => {
                       initial="initial"
                       animate="open"
                       exit="initial"
-                      className="flex  flex-col space-x-2 w-full justify-between items-center text-[3.95vw]"
+                      className="flex  flex-col space-x-2 w-full justify-between items-center text-[3rem]"
                     >
                       {Menus.map((menu, i) => {
                         return (
@@ -255,7 +254,7 @@ const NavBarBottom = () => {
                                 active === i
                                   ? "text-[#9D9E9D]"
                                   : "bg-transparent"
-                              } p-2 cursor-pointer hover:text-[#9D9E9D] uppercase w-full font-medium transition-all ease-linear duration-300 rounded-md text-center`}
+                              } p-2 cursor-pointer hover:text-[#9D9E9D] uppercase w-full font-medium transition-all ease-linear duration-100 rounded-md text-center`}
                             >
                               <Link href="/page">{menu.name}</Link>
                             </motion.div>
@@ -272,7 +271,7 @@ const NavBarBottom = () => {
                       animate="open"
                       className="overflow-hidden"
                     >
-                      <AiFillFacebook className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-300" />
+                      <AiFillFacebook className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-100" />
                     </motion.div>
 
                     <motion.div
@@ -281,7 +280,7 @@ const NavBarBottom = () => {
                       animate="open"
                       className="overflow-hidden"
                     >
-                      <AiOutlineInstagram className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-300" />
+                      <AiOutlineInstagram className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-100" />
                     </motion.div>
 
                     <motion.div
@@ -290,7 +289,7 @@ const NavBarBottom = () => {
                       animate="open"
                       className="overflow-hidden"
                     >
-                      <AiOutlineGithub className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-300" />
+                      <AiOutlineGithub className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-100" />
                     </motion.div>
 
                     <motion.div
@@ -299,7 +298,7 @@ const NavBarBottom = () => {
                       animate="open"
                       className="overflow-hidden"
                     >
-                      <AiFillYoutube className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-300" />
+                      <AiFillYoutube className="w-8 h-8 text-[white] hover:text-[#9D9E9D] transition-all duration-100" />
                     </motion.div>
                   </div>
                   <div className="flex space-x-2 w-full justify-center">
@@ -309,7 +308,7 @@ const NavBarBottom = () => {
                       }}
                       className={`${
                         langauge == "En" ? "border-white" : "border-[#494949]"
-                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-100 hover:border-white`}
                     >
                       EN
                     </div>
@@ -319,7 +318,7 @@ const NavBarBottom = () => {
                       }}
                       className={`${
                         langauge == "Vn" ? "border-white" : "border-[#494949]"
-                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-300 hover:border-white`}
+                      } rounded-full border p-[0.4rem] text-[12px] cursor-pointer transition-all ease-linear duration-100 hover:border-white`}
                     >
                       VN
                     </div>

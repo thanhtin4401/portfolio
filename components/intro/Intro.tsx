@@ -45,8 +45,8 @@ const Intro = () => {
         height={1200}
         src="https://res.cloudinary.com/dvzingci9/image/upload/v1698222274/Personal_Branding/Intro/image_8_duzhpa.png"
         alt=""
-        className="absolute bottom-0 transform -translate-x-2/4 animate__fadeInUp animate__animated"
-      ></Image>
+        className="absolute bottom-0 max-w-[25rem] transform -translate-x-2/4 animate__fadeInUp animate__animated"
+      />
       <div className="absolute bottom-0 w-full left-0 h-28 bg-gradient-to-t from-[black] z-20"></div>
     </div>
   );
