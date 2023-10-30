@@ -1,13 +1,19 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import "animate.css";
 import Image from "next/image";
+import { useScroll, useTransform, motion } from "framer-motion";
 const NavBar = () => {
+  const ref = useRef(null);
   const [isCloseNavBarHeader, setIsCloseNavBarHeader] = useState(false);
-
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-10000%"]);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleWindowscroll = () => {
@@ -37,10 +43,11 @@ const NavBar = () => {
   };
 
   return (
-    <nav
-      className={`${
-        isCloseNavBarHeader ? "animate__fadeOutUp" : "animate__fadeInDown"
-      } fixed top-8 w-full py-2 px-2 z-10 animate__animated animate__faster`}
+    <motion.div
+      style={{
+        y: textY,
+      }}
+      className={` absolute top-8 w-full py-2 px-2 z-10 animate__animated animate__faster`}
     >
       <div
         className={`${styles.navbar_background} py-1 px-4 rounded-md sm:container flex justify-between m-auto items-center`}
@@ -88,7 +95,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.div>
   );
 };
 
