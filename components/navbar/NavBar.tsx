@@ -67,7 +67,7 @@ const NavBar = () => {
           </div>
         </div>
         <div className="flex items-center">
-          <div className="bg-black w-2 h-2 rounded-full"></div>
+          <div className="bg-[#25ff25] w-2 h-2 rounded-full"></div>
           <span className="mx-2 text-[12px]">DASHBOARD VIEW</span>
           <div
             className={`${

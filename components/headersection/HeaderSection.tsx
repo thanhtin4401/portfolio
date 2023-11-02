@@ -108,7 +108,7 @@ const HeaderSection = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="yellow"
-                    className="w-8 h-8"
+                    className="w-9 h-9"
                   >
                     <path
                       strokeLinecap="round"
@@ -187,6 +187,58 @@ const HeaderSection = () => {
               </motion.div>
 
               <div className="w-full lg:w-2/4 relative flex justify-center items-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  style={{
+                    y: textY,
+                  }}
+                  animate={{ opacity: 0.9, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 2.8,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                  className="absolute bottom-0 bg-white items-center space-x-4 flex justify-end rounded-full p-2"
+                >
+                  <h1 className="text-[gray] font-bold">Project</h1>
+                  <h1 className="p-2 bg-[orange] w-10 h-10 flex justify-center items-center font-bold rounded-full">
+                    22
+                  </h1>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  style={{
+                    y: textY,
+                  }}
+                  animate={{ opacity: 0.7, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 2.8,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                  className="absolute rounded-xl bg-white top-0 z-50 opacity-70 right-0"
+                >
+                  <div className="p-2 border-b-[1px]">
+                    <h2 className="text-black text-[1.2rem] font-bold">
+                      Tin Tr.
+                    </h2>
+                    <p className="text-[orange] text-[0.7rem] font-light">
+                      Web develop{" "}
+                    </p>
+                  </div>
+                  <div className="p-2">
+                    <p className="text-[#2b9d2b] text-[0.7rem] font-light">
+                      Career Goal:
+                    </p>
+                    <h2 className="text-black text-[1.2rem] font-bold">
+                      Sr.Web developer
+                    </h2>
+                    <p className="text-[gray] text-[0.8rem] font-bold">
+                      Skill improve: NextJS
+                    </p>
+                  </div>
+                </motion.div>
+
                 <motion.img
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
